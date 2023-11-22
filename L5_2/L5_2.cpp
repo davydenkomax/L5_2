@@ -34,7 +34,7 @@ int main() {
     double* b;
     // Выделение памяти на целочисленный массив из n элементов
     b = new double[n];
-    
+
     for (int i = 0; i < n; i++) {
         sum += a[i];
         b[i] = sum;
@@ -43,6 +43,9 @@ int main() {
     for (int i = 0; i < n; i++) {
         cout << b[i] << " ";
     }
+    // Удаление выделенной памяти под массивы a, b
+    delete[] b;
+    delete[] a;
 
     return 0;
 }
